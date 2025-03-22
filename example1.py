@@ -82,7 +82,7 @@ transformers = {
     'Square Root': lambda x: np.sqrt(x) if (x >= 0).all() else np.nan
 }
 
-print("\n--- DÖNÜŞÜM KARŞILAŞTIRMASI ---")
+print("\n DÖNÜŞÜM KARŞILAŞTIRMASI ")
 for name, func in transformers.items():
     try:
         transformed = func(df[['Spending_Score']].values)

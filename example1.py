@@ -32,14 +32,14 @@ sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm')
 plt.title("Korelasyon Matrisi")
 plt.show()
 
-# 5. BASİT DOĞRUSAL REGRESYON (AGE vs SPENDING_SCORE)
+# 5. BASİT DOĞRUSAL REGRESYON 
 X = df[['Age']]
 y = df['Spending_Score']
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 model = LinearRegression()
 model.fit(X_train, y_train)
 
-print("\n--- BASİT REGRESYON ---")
+print("\n BASİT REGRESYON ")
 print("Eğim:", model.coef_[0])
 print("Sabit:", model.intercept_)
 print("R^2 Skoru:", round(model.score(X_test, y_test), 4))
